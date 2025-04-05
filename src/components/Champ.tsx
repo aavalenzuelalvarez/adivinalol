@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { champs } from "../data/db"
 import seedrandom from 'seedrandom'
+import ChampCard from "./ChampCard";
 
 function shuffleArray<T>(array: T[], seed: string): T[] {
   const rng = seedrandom(seed); 
@@ -40,10 +41,9 @@ export default function Champ() {
         <button className="bg-sky-600 rounded p-2 text-2xl text-white" onClick={getNewPoll}>Generar Seed</button>
       </div>
 
-      <div className="">
-        <p>{randomChamp.id}</p>
-        <img src={randomChamp.icon} alt="Icono del campeon principal" />
-      </div>
+      <ChampCard
+        randomChamp={randomChamp}
+      />
 
       <div className="max-w-4xl mx-auto">
         <ul className="grid grid-cols-5 mt-5 max-md:grid-cols-3">
