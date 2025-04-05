@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { champs } from "../data/db"
 import seedrandom from 'seedrandom'
 import ChampCard from "./ChampCard";
+import SeedSearch from "./SeedSearch";
 
 function shuffleArray<T>(array: T[], seed: string): T[] {
   const rng = seedrandom(seed); 
