@@ -1,10 +1,10 @@
 import { Champ } from "../types"
 
-type ChampProps = {
+type ChampCardProps = {
     randomChamp:Champ
 }
 
-export default function ChampCard({randomChamp}:ChampProps) {
+export default function ChampCard({randomChamp}:ChampCardProps) {
   return (
     <>
         <div 
