@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import seedrandom from 'seedrandom'
 import { champs } from "../data/db"
+import { Champ } from '../types';
 
 export default function useChamp(){
 
@@ -24,10 +25,18 @@ export default function useChamp(){
     setListaChamp(shuffleArray(seed).slice(0,15))
   },[seed])
 
-  useMemo(()=>{
-    setRandomChamp(listaChamp[Math.floor(Math.random() * (15))])
-  },[listaChamp])
+  // useMemo(()=>{
+  //   setRandomChamp(listaChamp[Math.floor(Math.random() * (15))])
+  // },[listaChamp])
 
+  const grabChampFromList = ()=>{
+    setRandomChamp(listaChamp[Math.floor(Math.random() * (15))])
+  }
+
+  const clickMultiplayer = (Champ:Champ)=>{
+    const champButton = document.getElementById("button"+Champ.id)
+    champButton?.classList.toggle("imgCross")
+  }
   
 
   // const getNewRandomChamp = ()=>{
@@ -39,5 +48,7 @@ export default function useChamp(){
     listaChamp,
     setSeed,
     randomChamp,
+    clickMultiplayer,
+    grabChampFromList
   }
 }

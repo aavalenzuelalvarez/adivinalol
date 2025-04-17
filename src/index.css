@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+
+.imgCross{
+    opacity: 0.3;
+    position: relative;
+}
+
+.imgCross::before{
+    content: "X";
+    color: red;
+    font-size: 90px;
+    position:absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: -15px;
+    cursor: pointer;
+}

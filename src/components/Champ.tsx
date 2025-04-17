@@ -4,11 +4,12 @@ import SeedSearch from "./SeedSearch";
 import ChampList from "./ChampList";
 
 export default function Champ() {
-  const { listaChamp, setSeed, randomChamp } = useChamp()
+  const { listaChamp, setSeed, randomChamp, clickMultiplayer, grabChampFromList } = useChamp()
   return (
     <>
       <SeedSearch 
         setSeed={setSeed}
+        grabChampFromList={grabChampFromList}
       />
 
       <ChampCard
@@ -17,6 +18,7 @@ export default function Champ() {
 
       <ChampList
         listaChamp={listaChamp}
+        clickMultiplayer={clickMultiplayer}
       />
     </>
   )

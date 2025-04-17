@@ -1,10 +1,11 @@
 import { useState } from "react"
 
 type seedSearchProps={
-  setSeed: React.Dispatch<React.SetStateAction<string>>
+  setSeed: React.Dispatch<React.SetStateAction<string>>,
+  grabChampFromList: () => void
 }
 
-export default function SeedSearch({setSeed}:seedSearchProps) {
+export default function SeedSearch({setSeed,grabChampFromList}:seedSearchProps) {
   const [seedInput, setSeedInput] = useState('')
   return (
     <>
@@ -19,7 +20,7 @@ export default function SeedSearch({setSeed}:seedSearchProps) {
           />
         </div>
         <button className="bg-sky-600 rounded p-2 text-2xl text-white"
-          onClick={()=>{setSeed(seedInput)}}
+          onClick={()=>{setSeed(seedInput);grabChampFromList()}}
         >Generar Seed</button>
       </div>
     </>
