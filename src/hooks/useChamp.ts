@@ -25,6 +25,7 @@ export default function useChamp(){
     setListaChamp(shuffleArray(seed).slice(0,15))
   },[seed])
 
+  // Esta funcion genera un campeón aleatorio cada vez que genera un seed.
   // useMemo(()=>{
   //   setRandomChamp(listaChamp[Math.floor(Math.random() * (15))])
   // },[listaChamp])
