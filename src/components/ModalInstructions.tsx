@@ -27,7 +27,7 @@ export default function ModalInstructions({showModal,toggleModal}:ModalInstructi
                 <li>El campeón principal va a cambiar a uno de la semilla que tú escogiste y tu tablero será el de tu compañero</li>
               </ol>
               <br />
-              <p>Con esto ya están listos para jugar, la idea es hacer preguntas entre ustedes para adivinar el campeón de su compañero, puede ser cualquiera de todo el tablero prueba test </p>
+              <p>Con esto ya están listos para jugar, la idea es hacer preguntas entre ustedes para adivinar el campeón de su compañero, puede ser cualquiera de todo el tablero</p>
             </div>
           </div>
         </div>
