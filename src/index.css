@@ -16,3 +16,22 @@
     top: -15px;
     cursor: pointer;
 }
+
+.modalInstructions {
+    z-index: 10;
+    animation: opacidad;
+    animation-duration: 0.5s;
+    transition: all;
+}
+
+@keyframes opacidad{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 100;
+    }
+}
+
+.fondoModal {
+    background-color: #000000e1;
+}

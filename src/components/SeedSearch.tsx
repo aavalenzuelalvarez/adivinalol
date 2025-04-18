@@ -19,7 +19,8 @@ export default function SeedSearch({setSeed,grabChampFromList}:seedSearchProps) 
               onChange={(e)=> setSeedInput(e.target.value)}
           />
         </div>
-        <button className="bg-sky-600 rounded p-2 text-2xl text-white"
+        <button className="bg-sky-600 rounded p-2 text-2xl text-white cursor-pointer
+        hover:opacity-90"
           onClick={()=>{setSeed(seedInput);grabChampFromList()}}
         >Generar Seed</button>
       </div>

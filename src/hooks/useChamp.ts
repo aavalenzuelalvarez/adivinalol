@@ -7,6 +7,8 @@ export default function useChamp(){
 
   const [seed, setSeed] = useState("mi-semilla");
 
+  const [showModal, setShowModal] = useState(Boolean(JSON.parse(localStorage.getItem("modal")||"false")))
+
   const shuffleArray = (seed:string)=>{
     const rng = seedrandom(seed); 
     const shuffled = champs.slice();
@@ -44,12 +46,23 @@ export default function useChamp(){
   //   setRandomChamp(listaChamp[Math.floor(Math.random() * (12))])
   // }
 
+  const toggleModal = ()=>{
+    if (showModal){
+      setShowModal(false)
+    }else{
+      setShowModal(true)
+      localStorage.setItem("modal","true")
+    }
+  }
+
   
   return {
     listaChamp,
     setSeed,
     randomChamp,
     clickMultiplayer,
-    grabChampFromList
+    grabChampFromList,
+    showModal,
+    toggleModal,
   }
 }
